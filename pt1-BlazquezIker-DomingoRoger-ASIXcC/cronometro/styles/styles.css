@@ -1,0 +1,134 @@
+@import url(//db.onlinewebfonts.com/c/84cb021d5f9af287ffff84b61beef6dc?family=clockicons);
+@import url(https://fonts.googleapis.com/css?family=Orbitron:700);
+
+/* Estilos base */
+body {
+    font-family: 'Orbitron', sans-serif;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para el cambio de tema */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Tema oscuro (por defecto) */
+body.dark-theme {
+    background: black;
+    color: lime;
+}
+
+body.dark-theme .contenedor {
+    background: rgba(100, 100, 100, 0.3);
+    border: 1px solid lime;
+}
+
+body.dark-theme button {
+    background: grey;
+    color: white;
+    border: 1px solid lime;
+}
+
+body.dark-theme input,
+body.dark-theme select {
+    border: 1px solid lime;
+    background: black;
+    color: lime;
+}
+
+body.dark-theme .obs {
+    color: white;
+}
+
+/* Tema claro */
+body.light-theme {
+    background: white;
+    color: black;
+}
+
+body.light-theme .contenedor {
+    background: rgba(200, 200, 200, 0.3);
+    border: 1px solid black;
+}
+
+body.light-theme button {
+    background: #f0f0f0;
+    color: black;
+    border: 1px solid black;
+}
+
+body.light-theme input,
+body.light-theme select {
+    border: 1px solid black;
+    background: white;
+    color: black;
+}
+
+body.light-theme .obs {
+    color: black;
+}
+
+/* Estilos comunes */
+.contenedor {
+    margin: 10%;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.t {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.timeis {
+    width: 100%;
+    padding: 10px;
+    font-size: 3em;
+    font-family: 'clockicons', sans-serif;
+    letter-spacing: 5px;
+}
+
+.desperta {
+    position: relative;
+    top: 20px;
+    margin-top: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+input[type="text"],
+select {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.obs {
+    position: relative;
+    top: 150px;
+    font-size: 0.9em;
+}
+
+/* Estilos para el botón de cambio de tema */
+#themeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    z-index: 1000;
+}
