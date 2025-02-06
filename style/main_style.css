@@ -1,0 +1,130 @@
+/* Variables globales */
+:root {
+    --primary-color: #6200ea; /* Morado profundo */
+    --secondary-color: #f4f4f9; /* Gris claro */
+    --text-color-light: #333; /* Texto oscuro */
+    --text-color-dark: #fff; /* Texto blanco */
+    --transition-duration: 0.3s; /* Duración de transiciones */
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif; /* Fuente moderna */
+    line-height: 1.6;
+    transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease;
+}
+
+/* Tema Claro (predeterminado) */
+body {
+    background-color: var(--secondary-color);
+    color: var(--text-color-light);
+}
+
+/* Tema Oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: var(--text-color-dark);
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, var(--primary-color), #7c1bea); /* Gradiente morado */
+    position: sticky;
+    color: var(--text-color-dark);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Botón de cambio de tema */
+#theme-toggle {
+    background: none;
+    border: 2px solid var(--text-color-dark);
+    color: var(--text-color-dark);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px; /* Botón redondeado */
+    cursor: pointer;
+    transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease, border-color var(--transition-duration) ease;
+}
+
+#theme-toggle:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color-dark);
+    border-color: var(--primary-color);
+}
+
+/* Contenedor principal */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); /* Diseño responsive */
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Tarjetas de herramientas */
+.tool {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+}
+
+.tool:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tool img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.tool h2 {
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    background: linear-gradient(135deg, #f9f9f9, #eaeaea); /* Fondo suave */
+}
+
+.tool a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Pie de página */
+footer {
+    background: linear-gradient(135deg, var(--primary-color), #7c1bea); /* Gradiente morado */
+    color: var(--text-color-dark);
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}

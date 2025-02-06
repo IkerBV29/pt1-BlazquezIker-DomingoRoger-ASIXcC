@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador ⏰</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="script/script.js"></script>
+</head>
+<body class="dark-theme"> <!-- Clase inicial: tema oscuro -->
+    <button onclick="toggleTheme()">(Roger e Iker) Cambiar de tema</button> 
+    <div class="contenedor">
+        <div class="t">Hora Actual:</div>
+        <div class="timeis" id="currentTime"></div>
+    </div>
+    <div class="contenedor">
+        <div class="t">Tiempo Restante:</div>
+        <div class="timeis" id="countdown"></div>
+    </div>
+    <div class="desperta">
+        <h2>(Roger e Iker)DESPERTADOR:</h2>
+        <label for="endTime">Hora de finalización (HH:MM):</label>
+        <input type="text" id="endTime" placeholder="00:00">
+        <button onclick="setEndTime()">OK!</button>
+        <br><br>
+        <label for="soundSelect">Sonido de alarma:</label>
+        <select id="soundSelect">
+            <option value="sounds/sound1.mp3">Sonido 1</option>
+            <option value="sounds/sound2.mp3">Sonido 2</option>
+            <option value="sounds/sound3.mp3">Sonido 3</option>
+        </select>
+    </div>
+</body>
+</html>
